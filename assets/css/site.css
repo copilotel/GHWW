@@ -64,8 +64,6 @@ button, input { font: inherit; color: inherit; border-radius: 0; }
 /* the stepped cross from the logo, as a small mark */
 .mark { display: inline-block; width: 0.85em; height: 0.85em; margin-right: 0.6em; vertical-align: -0.08em; background: var(--c, var(--ink));
   clip-path: polygon(33.33% 0, 66.67% 0, 66.67% 16.67%, 83.33% 16.67%, 83.33% 33.33%, 100% 33.33%, 100% 66.67%, 83.33% 66.67%, 83.33% 83.33%, 66.67% 83.33%, 66.67% 100%, 33.33% 100%, 33.33% 83.33%, 16.67% 83.33%, 16.67% 66.67%, 0 66.67%, 0 33.33%, 16.67% 33.33%, 16.67% 16.67%, 33.33% 16.67%); }
-.marks { display: flex; gap: 0.4rem; }
-.marks .mark { width: 0.8rem; height: 0.8rem; margin: 0; }
 
 .ico { display: grid; place-items: center; width: 3rem; height: 3rem; flex: none; background: var(--t, var(--paper-2)); color: var(--c, var(--ink)); border-radius: var(--radius); }
 .ico svg { width: 1.6rem; height: 1.6rem; }
@@ -133,7 +131,7 @@ p + p { margin-top: 1em; }
 .menu__foot a { text-decoration: none; }
 
 /* ---------- hero ---------- */
-.hero { position: relative; height: calc(100svh - 7.7rem); min-height: 34rem; max-height: 62rem; overflow: hidden; }
+.hero { position: relative; height: calc(100svh - 7.4rem); min-height: 34rem; max-height: 62rem; overflow: hidden; }
 .hero__img { position: absolute; inset: 0; background: var(--paper-2); }
 .hero__img img { position: absolute; inset: 0; width: 128%; max-width: none; height: 100%; object-fit: cover; object-position: 0 56%; }
 .hero__panel { position: absolute; left: 0; bottom: 0; background: var(--paper); padding: clamp(1.75rem, 3.4vw, 3.25rem) clamp(1.75rem, 4vw, 4rem) clamp(1.75rem, 3.4vw, 3rem) var(--gutter); width: min(46rem, 58%); }
@@ -152,12 +150,11 @@ p + p { margin-top: 1em; }
 
 .page-head { padding-block: clamp(2.25rem, 4.5vw, 4rem) clamp(2rem, 3.5vw, 3rem); border-bottom: 1px solid var(--rule); }
 .page-head .wrap { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); column-gap: var(--gutter); align-items: end; }
-.page-head .marks { grid-column: 1 / -1; grid-row: 1; margin-bottom: 1rem; }
-.page-head .label { grid-column: 1 / -1; grid-row: 2; }
+.page-head .label { grid-column: 1 / -1; grid-row: 1; }
 .page-head { background: var(--t); }
-.page-head h1 { margin-block: 0.9rem 0; grid-column: 1; grid-row: 3 / span 2; align-self: end; }
-.page-head .statement { grid-column: 2; grid-row: 3; margin-top: 0.9rem; font-size: clamp(1.25rem, 1.9vw, 1.7rem); }
-.page-head .actions { grid-column: 2; grid-row: 4; display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
+.page-head h1 { margin-block: 0.9rem 0; grid-column: 1; grid-row: 2 / span 2; align-self: end; }
+.page-head .statement { grid-column: 2; grid-row: 2; margin-top: 0.9rem; font-size: clamp(1.25rem, 1.9vw, 1.7rem); }
+.page-head .actions { grid-column: 2; grid-row: 3; display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
 
 .facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.75rem; }
 .facts li { padding: 1.5rem; background: var(--t); border-radius: var(--radius); }
@@ -278,7 +275,7 @@ a.res:hover { opacity: 0.6; }
   .aside, .main, .main--wide { grid-column: 1 / -1; }
   .grid { row-gap: 1.75rem; }
   .page-head .wrap { grid-template-columns: 1fr; }
-  .page-head .marks, .page-head .label, .page-head h1, .page-head .statement, .page-head .actions { grid-column: 1; grid-row: auto; }
+  .page-head .label, .page-head h1, .page-head .statement, .page-head .actions { grid-column: 1; grid-row: auto; }
   .page-head .statement { margin-top: 1.25rem; }
   .foot { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .foot__brand { grid-column: 1 / -1; }
